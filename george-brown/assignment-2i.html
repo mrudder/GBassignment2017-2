@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<title>George Brown | Slider Assignment #3</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="css/gb-assignment-3.css">
+<body>
+
+<h2 class="mlr-center">Manual Slideshow</h2>
+
+<div class="mlr-content mlr-display-container">
+  <img class="mySlides" src="img/pizza-base.jpg" style="width:100%">
+  <img class="mySlides" src="img/meat-toppings.jpg" style="width:100%">
+  <img class="mySlides" src="img/pizza-sauces.jpg" style="width:100%">
+  <img class="mySlides" src="img/veggie-toppings.jpg" style="width:100%">
+
+  <button class="mlr-button mlr-black mlr-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="mlr-button mlr-black mlr-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+</body>
+</html>

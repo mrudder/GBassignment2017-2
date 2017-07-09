@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <script src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
+  <link rel="stylesheet" href="css/practice-4.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="jquery-confirm-master/css/jquery-confirm.css">
+  <script src="js/practice-4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="js/jquery.mousewheel.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+  <h3>Tabs</h3>
+  <ul class="nav nav-pills">
+    <li id="menu"><a value="Refresh Page" onClick="window.location.reload()" href="#">Step 1</a></li>
+    <li id="menu1"><a href="#">Step 2</a></li>
+    <li id="menu2"><a href="#">Step 3</a></li>
+  </ul>
+  
+  <div id="homeForm">
+    <h2>Check Out</h2>
+<form action="http://my.rudderswork.com/george-brown/practice-4.html#menu1Form" class="form-signin">
+	 <input type="name" class="form-control" placeholder="First and Last Name" required=""><br />
+	 <input type="home" class="form-control" placeholder="Home Address" required=""><br />
+    <input type="email" class="form-control" placeholder="Email Address" required=""><br />
+    <input id="pass" type="password" class="form-control" placeholder="Password" required=""><br />
+    <input id="cpass" type="password" class="form-control" placeholder="Confirm Password" required=""><br />
+	<p id="passmtch"> </p>
+    <button id="Step2" class="btn btn-large btn-primary" type="submit">Next Step
+	</button>
+
+ 
+	
+	</form>	
+	
+
+<script>
+
+$('form').on('submit',function(){
+   if($('#pass').val()!=$('#cpass').val()){
+       $("#passmtch").text("Passwords do not match");//alert('Passwords do not match');
+       return false;
+   }
+   return true;
+});
+
+                        
+</script> 
+
+  </div>
+
+
+<div id="menu1Form">
+    <h2>Enter Credit Information</h2>
+    <div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            
+            <br />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="credit-card-div">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <h5 class="text-muted"> Credit Card Number</h5>
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                <input type="text" class="form-control" placeholder="0000" />
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                <input type="text" class="form-control" placeholder="0000" />
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                <input type="text" class="form-control" placeholder="0000" />
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                <input type="text" class="form-control" placeholder="0000" />
+                            </div>
+                        </div>
+						<br />
+						<div class="form-group">
+						 <h5 class="text-muted"> Type</h5>
+						  <select class="form-control" id="sel1">
+							<option></option>
+							<option>Mastercard</option>
+							<option>Visa</option>
+							<option>American Express</option>
+							</select>
+						</div>
+                        <div class="row ">
+                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                <span class="help-block text-muted small-font"> Expiry Month</span>
+                                <input type="text" class="form-control" placeholder="MM" />
+
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                <span class="help-block text-muted small-font">  Expiry Year</span>
+                                <input type="text" class="form-control" placeholder="YY" />
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                <span class="help-block text-muted small-font">  CCV</span>
+                                <input type="text" class="form-control" placeholder="CCV" />
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                <img src="http://my.rudderswork.com/george-brown/img/cvv.png" class="img-rounded" />
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-md-12 pad-adjust">
+
+                                <input type="text" class="form-control" placeholder="Name On The Card" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pad-adjust">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" checked class="text-muted"> Save details for fast payments. <a href="#">Learn More</a>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-md-6 col-sm-6 col-xs-6 pad-adjust">
+                                <input type="submit" class="btn btn-danger" value="CANCEL" />
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-6 pad-adjust">
+                                <input type="submit" class="btn btn-warning btn-block" value="PAY NOW" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- CREDIT CARD DIV END -->
+        </div>
+    </div>
+</div>
+  </div>
+
+
+<div id="menu2Form">
+    <h2>Finished</h2>
+    <form class="form-horizontal" action="/action_page.php">
+        
+    </form>
+	
+	
+  </div>
+
+
+</div>
+<script type="text/javascript">
+ //Source: http://twitterbootstrap.org/bootstrap-form-validation/
+   $(document).ready(function() {
+    $('#reg_form').bootstrapValidator({
+        // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            first_name: {
+                validators: {
+                        stringLength: {
+                        min: 2,
+                    },
+                        notEmpty: {
+                        message: 'Please supply your first name'
+                    }
+                }
+            },
+             last_name: {
+                validators: {
+                     stringLength: {
+                        min: 2,
+                    },
+                    notEmpty: {
+                        message: 'Please supply your last name'
+                    }
+                }
+            },
+           
+            phone: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please supply your phone number'
+                    },
+                    phone: {
+                        country: 'US',
+                        message: 'Please supply a vaild phone number with area code'
+                    }
+                }
+            },
+            address: {
+                validators: {
+                     stringLength: {
+                        min: 8,
+                    },
+                    notEmpty: {
+                        message: 'Please supply your street address'
+                    }
+                }
+            },
+            city: {
+                validators: {
+                     stringLength: {
+                        min: 4,
+                    },
+                    notEmpty: {
+                        message: 'Please supply your city'
+                    }
+                }
+            },
+            state: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please select your state'
+                    }
+                }
+            },
+            zip: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please supply your zip code'
+                    },
+                    zipCode: {
+                        country: 'US',
+                        message: 'Please supply a vaild zip code'
+                    }
+                }
+            },
+		comment: {
+                validators: {
+                      stringLength: {
+                        min: 10,
+                        max: 200,
+                        message:'Please enter at least 10 characters and no more than 200'
+                    },
+                    notEmpty: {
+                        message: 'Please supply a description about yourself'
+                    }
+                    }
+                 },	
+	 email: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please supply your email address'
+                    },
+                    emailAddress: {
+                        message: 'Please supply a valid email address'
+                    }
+                }
+            },
+					
+	password: {
+            validators: {
+                identical: {
+                    field: 'confirmPassword',
+                    message: 'Confirm your password below - type same password please'
+                }
+            }
+        },
+        confirmPassword: {
+            validators: {
+                identical: {
+                    field: 'password',
+                    message: 'The password and its confirm are not the same'
+                }
+            }
+         },
+			
+            
+            }
+        })
+		
+ 	
+        .on('success.form.bv', function(e) {
+            $('#success_message').slideDown({ opacity: "show" }, "slow") // Do something ...
+                $('#reg_form').data('bootstrapValidator').resetForm();
+
+            // Prevent form submission
+            e.preventDefault();
+
+            // Get the form instance
+            var $form = $(e.target);
+
+            // Get the BootstrapValidator instance
+            var bv = $form.data('bootstrapValidator');
+
+            // Use Ajax to submit form data
+            $.post($form.attr('action'), $form.serialize(), function(result) {
+                console.log(result);
+            }, 'json');
+        });
+});
+
+</script>
+
+</body>
+</html>

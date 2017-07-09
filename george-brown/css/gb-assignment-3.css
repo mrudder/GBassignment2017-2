@@ -1,0 +1,96 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+#gap{
+	padding:7%;	
+}
+
+.empty{
+	background-color:#990000;
+	border:none;
+}
+.checkouts{
+	background-color: #009933;
+	border:none;
+}
+
+form{
+	margin-left:15%; margin-top:-10%; padding-bottom: 5%;
+}
+.form-group{
+	width:60%; 
+}
+.wrapper {
+  min-height: 110%;
+
+  /* Equal to height of footer */
+  /* But also accounting for potential margin-bottom of last child */
+  margin-bottom: -50px;
+}
+
+.Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.Site-content {
+  flex: 1;
+}
+
+.Lsidenav{
+	
+}
+.Rsidenav{
+	position:absolute; width: 45%;
+	margin-left:50%;
+}
+
+
+.footer,
+.push {
+  height: 50px; 
+}
+
+#panel,
+#panel2,
+#panel3,
+#panel4{
+	
+	width:50%;
+}
+.panels, .flips {
+    padding: 5px;
+    text-align: center;
+    
+}
+
+.panels {
+    padding: 50px;
+    display: none;
+}
+
+#footer {
+  width:100%;
+  height: 7%;
+  margin-top: 150px;
+  background:#0047b3;
+}
+.mrgleft{
+	margin-left:125px; margin-top:125px;
+}
+#myNavbar,
+.well,
+.navbar, 
+.navbar-inverse {
+    background-color: #0047b3;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
+    background-color: #b3d1ff !important;
+}
+
+#label01{
+	padding:30px; margin-left:115px;
+}

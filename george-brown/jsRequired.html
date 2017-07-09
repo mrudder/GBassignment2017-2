@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+Name: <input id='Name' type='text' />
+<br /><br />
+Address: <input id='Address' type='text' />
+
+<script>
+$("#Name").focus();
+$("#Name").blur(function(){
+    var name=$('#Name').val();
+    if(name.length == 0){
+        $('#Name').after('<div class="red">Name is Required</div>');
+    }
+    else {
+        $('#Name').next(".red").remove();
+        return true;
+    }
+});
+
+   $("#Address").blur(function(){
+    var address=$('#Address').val();
+    if(address.length == 0){
+        $('#Address').after('<div class="red">Address is Required</div>');
+        return false;
+    }
+    else {
+        $('#Address').next(".red").remove();
+        return true;
+    }
+});
+</script>
+</html>

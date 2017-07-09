@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.mrgleft{
+margin-left: 50px;
+width: 400px;
+}
+</style>
+</head>
+<body class="mrgleft">
+ 
+<h2>JavaScript in body improves display speed</h2>
+
+<p id="demo"><strong>Before Click</strong> <br />Nulla porttitor velit eget tortor efficitur, et vehicula velit egestas. Phasellus vestibulum metus sed neque posuere, non suscipit odio ornare. In nibh mi, pulvinar sit amet neque a, convallis ullamcorper ante. Sed metus enim, accumsan id augue vestibulum, cursus imperdiet neque. Proin consectetur lobortis quam ac congue. Quisque tincidunt non orci ultricies blandit. Phasellus vitae rhoncus diam. Nunc tellus enim, tristique vitae nisi sed, convallis sagittis risus. Aenean eros velit, suscipit non sodales vitae, dapibus non augue. Praesent tincidunt nisi et mi viverra, vitae sollicitudin nulla convallis. In ac felis laoreet, vestibulum mi sed, tincidunt turpis. Praesent vulputate pulvinar lorem ut blandit.</p>
+
+<button type="button" onclick="mikesFunction()">Click Me!</button>
+
+<script>
+function mikesFunction() {
+    document.getElementById("demo").innerHTML = "<strong>After Click</strong> <br />Mauris congue, libero at hendrerit sagittis, ex dolor fermentum arcu, eu tristique velit orci blandit nulla. Aenean eu faucibus nisi, et venenatis dolor. Etiam semper nibh pretium elit ullamcorper pellentesque. <strong>Donec consequat</strong> arcu ac felis cursus consequat. Pellentesque feugiat euismod nibh eu viverra. Sed dignissim orci eros, eu facilisis arcu venenatis et. Morbi scelerisque ultricies rutrum. Nunc elementum purus vitae aliquet suscipit. Aenean et maximus elit, at hendrerit arcu. Maecenas nec risus non dolor finibus tristique ac at ligula. Nullam varius nulla in magna imperdiet volutpat. Aliquam ex augue, semper quis mauris sed, condimentum molestie libero. Maecenas ut massa vel lectus ornare iaculis. Suspendisse potenti. <br /> <br />Maecenas eu eros diam. Morbi vel turpis eu justo consequat elementum. Praesent in urna eu nisi tincidunt blandit. Nullam malesuada venenatis nulla. Curabitur faucibus quam id pellentesque malesuada. Sed viverra maximus arcu, at vestibulum mauris imperdiet et. Suspendisse in vulputate mi. Nullam porttitor sit amet elit at lobortis. Sed non lobortis lectus. Nulla scelerisque purus eget ornare pharetra. Aenean luctus massa eu erat suscipit commodo.";
+}
+</script>
+
+<p>
+<strong>Note:</strong> <br />
+Placing scripts at the bottom of the '<body>' element improves the display speed, because Script compilation slows down the display.
+</p>
+
+</body>
+</html> 
